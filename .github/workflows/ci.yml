@@ -5,10 +5,12 @@ on:
     branches:
       - main
       - master
+      - dev
   pull_request:
     branches:
       - main
       - master
+      - dev
 
 jobs:
   ci:
@@ -40,3 +42,6 @@ jobs:
 
       - name: Run code style check
         run: npm run lint
+
+      - name: Run tests
+        run: npm run test
